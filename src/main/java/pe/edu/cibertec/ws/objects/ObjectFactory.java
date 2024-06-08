@@ -2,7 +2,7 @@
 // Este archivo ha sido generado por Eclipse Implementation of JAXB v3.0.0 
 // Visite https://eclipse-ee4j.github.io/jaxb-ri 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2024.06.08 a las 04:54:00 PM PET 
+// Generado el: 2024.06.08 a las 05:14:33 PM PET 
 //
 
 
@@ -37,59 +37,83 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetAutoresRequest }
+     * Create an instance of {@link CalcularEstacionamientoRequest }
      * 
      */
-    public GetAutoresRequest createGetAutoresRequest() {
-        return new GetAutoresRequest();
+    public CalcularEstacionamientoRequest createCalcularEstacionamientoRequest() {
+        return new CalcularEstacionamientoRequest();
     }
 
     /**
-     * Create an instance of {@link GetAutoresResponse }
+     * Create an instance of {@link CalcularEstacionamientoResponse }
      * 
      */
-    public GetAutoresResponse createGetAutoresResponse() {
-        return new GetAutoresResponse();
+    public CalcularEstacionamientoResponse createCalcularEstacionamientoResponse() {
+        return new CalcularEstacionamientoResponse();
     }
 
     /**
-     * Create an instance of {@link Autorws }
+     * Create an instance of {@link CalcularPromedioRequest }
      * 
      */
-    public Autorws createAutorws() {
-        return new Autorws();
+    public CalcularPromedioRequest createCalcularPromedioRequest() {
+        return new CalcularPromedioRequest();
     }
 
     /**
-     * Create an instance of {@link GetAutorRequest }
+     * Create an instance of {@link CalcularPromedioResponse }
      * 
      */
-    public GetAutorRequest createGetAutorRequest() {
-        return new GetAutorRequest();
+    public CalcularPromedioResponse createCalcularPromedioResponse() {
+        return new CalcularPromedioResponse();
     }
 
     /**
-     * Create an instance of {@link GetAutorResponse }
+     * Create an instance of {@link VerificarDNIRequest }
      * 
      */
-    public GetAutorResponse createGetAutorResponse() {
-        return new GetAutorResponse();
+    public VerificarDNIRequest createVerificarDNIRequest() {
+        return new VerificarDNIRequest();
     }
 
     /**
-     * Create an instance of {@link PostAutorRequest }
+     * Create an instance of {@link VerificarDNIResponse }
      * 
      */
-    public PostAutorRequest createPostAutorRequest() {
-        return new PostAutorRequest();
+    public VerificarDNIResponse createVerificarDNIResponse() {
+        return new VerificarDNIResponse();
     }
 
     /**
-     * Create an instance of {@link PostAutorResponse }
+     * Create an instance of {@link NumerosParesRequest }
      * 
      */
-    public PostAutorResponse createPostAutorResponse() {
-        return new PostAutorResponse();
+    public NumerosParesRequest createNumerosParesRequest() {
+        return new NumerosParesRequest();
+    }
+
+    /**
+     * Create an instance of {@link NumerosParesResponse }
+     * 
+     */
+    public NumerosParesResponse createNumerosParesResponse() {
+        return new NumerosParesResponse();
+    }
+
+    /**
+     * Create an instance of {@link CalcularDescuentoRequest }
+     * 
+     */
+    public CalcularDescuentoRequest createCalcularDescuentoRequest() {
+        return new CalcularDescuentoRequest();
+    }
+
+    /**
+     * Create an instance of {@link CalcularDescuentoResponse }
+     * 
+     */
+    public CalcularDescuentoResponse createCalcularDescuentoResponse() {
+        return new CalcularDescuentoResponse();
     }
 
 }

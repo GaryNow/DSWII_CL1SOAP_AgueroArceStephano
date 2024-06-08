@@ -1,0 +1,89 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://www.cibertec.edu.pe/ws/objects"
+           targetNamespace="http://www.cibertec.edu.pe/ws/objects"
+           elementFormDefault="qualified">
+
+    <!-- Pregunta 1: Estacionamiento -->
+    <xs:element name="CalcularEstacionamientoRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="horas" type="xs:int"/>
+                <xs:element name="minutos" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="CalcularEstacionamientoResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="monto" type="xs:double"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Pregunta 2: Promedio Notas -->
+    <xs:element name="CalcularPromedioRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nota1" type="xs:int"/>
+                <xs:element name="nota2" type="xs:int"/>
+                <xs:element name="nota3" type="xs:int"/>
+                <xs:element name="nota4" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="CalcularPromedioResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="promedio" type="xs:double"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Pregunta 3: Verificar DNI -->
+    <xs:element name="VerificarDNIRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="anioNacimiento" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="VerificarDNIResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="debeSacarDNI" type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Pregunta 4: Números Pares -->
+    <xs:element name="NumerosParesRequest">
+        <xs:complexType>
+            <xs:sequence/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="NumerosParesResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="numeros" type="xs:int" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Pregunta 5: Calcular Descuento -->
+    <xs:element name="CalcularDescuentoRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="cantidad" type="xs:int"/>
+                <xs:element name="precio" type="xs:double"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="CalcularDescuentoResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="montoTotal" type="xs:double"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
