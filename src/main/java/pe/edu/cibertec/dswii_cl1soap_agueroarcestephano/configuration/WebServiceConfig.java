@@ -1,5 +1,6 @@
 package pe.edu.cibertec.dswii_cl1soap_agueroarcestephano.configuration;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
@@ -26,7 +27,7 @@ public class WebServiceConfig extends WsConfigurerAdapter {
     }
 
     @Bean(name = "autores")
-    public DefaultWsdl11Definition autorWsdl11Definition(XsdSchema autorSchema){
+    public DefaultWsdl11Definition autorWsdl11Definition(@Qualifier("autoresSchema") XsdSchema autorSchema){
         DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
         wsdl11Definition.setPortTypeName("AutoresPort");
         wsdl11Definition.setLocationUri("/ws/autores");
@@ -38,5 +39,21 @@ public class WebServiceConfig extends WsConfigurerAdapter {
     public XsdSchema autoresSchema(){
         return new SimpleXsdSchema(new ClassPathResource("xsd/autor.xsd"));
     }
+
+    @Bean(name = "examen")
+    public DefaultWsdl11Definition examenWsdl11Definition(XsdSchema examenSchema) {
+        DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
+        wsdl11Definition.setPortTypeName("ExamenPort");
+        wsdl11Definition.setLocationUri("/ws/examen");
+        wsdl11Definition.setTargetNamespace("http://www.cibertec.edu.pe/ws/objects");
+        wsdl11Definition.setSchema(examenSchema);
+        return wsdl11Definition;
+    }
+
+    @Bean
+    public XsdSchema examenSchema() {
+        return new SimpleXsdSchema(new ClassPathResource("xsd/examen.xsd"));
+    }
+
 
 }
